@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Charger les données
-data_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/PIBDone/PIB/PIBNew.xlsx'
+data_path = 'PIBNew.xlsx'
 df = pd.read_excel(data_path)
 
 # Afficher les premières lignes pour comprendre la structure des données
@@ -10,7 +10,7 @@ print(df.head())
 import pandas as pd
 
 # Charger les données
-data_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/PIB/PIBNew.xlsx'
+data_path = 'PIBNew.xlsx'
 df = pd.read_excel(data_path)
 
 # Afficher les premières lignes des données pour comprendre la structure
@@ -142,7 +142,6 @@ r2 = r2_score(df_tunisie_pib['PIB'], predictions)
 
 print(f'R²: {r2}')
 
-Regression Linéaire
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
 # Visualisation de l'autocorrélation
@@ -227,11 +226,10 @@ plt.show()
 
 predictions, r2_linear
 
-file_path = 'C:\\Users\\ASUS TUF I5\\Desktop\\PFE\\ETUDE DU SECTEUR\\KPI\\PIB\\predictions.xlsx'
+file_path = 'predictions.xlsx'
 predictions.to_excel(file_path, index=False)
 
 print("Predictions saved to Excel file successfully.")
-Forest Random
 from sklearn.ensemble import RandomForestRegressor
 forest_model = RandomForestRegressor(n_estimators=1000, random_state=42)
 
@@ -340,7 +338,7 @@ import matplotlib.pyplot as plt
 
 # Placeholder for loading the DataFrame
 # Replace 'path_to_your_file.xlsx' with the actual path to your Excel file
-path_to_your_file = 'C:/Users\/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/PIB/PIB/fusion.xlsx'
+path_to_your_file = 'fusion.xlsx'
 predictions = pd.read_excel(path_to_your_file, usecols=['Country Name', 'Year', 'Value'])
 
 # Convert 'Value' to numeric, coercing errors
@@ -368,7 +366,7 @@ import matplotlib.pyplot as plt
 
 # Placeholder for loading the DataFrame
 # Replace 'path_to_your_file.xlsx' with the actual path to your Excel file
-path_to_your_file = 'C:/Users\/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/PIB/PIB/fusion.xlsx'
+path_to_your_file = 'fusion.xlsx'
 # Assuming `predictions` is your DataFrame
 # Ensure 'Year' and 'Value' are sorted
 predictions.sort_values(['Country Name', 'Year'], inplace=True)
@@ -385,14 +383,14 @@ predictions.loc[predictions['Year'] == 2010, 'Percentage Change'] = 0
 print(predictions)
 
 # Enregistrer le DataFrame dans un fichier Excel spécifique
-chemin_enregistrement = r'C:\Users\ASUS TUF I5\Desktop\PFE\ETUDE DU SECTEUR\KPI\PIB\PIB\PIBPourcentafe.xlsx'
+chemin_enregistrement = r'PIBPourcentafe.xlsx'
 predictions.to_excel(chemin_enregistrement, index=False)
 
 print(f'Le DataFrame a été enregistré avec succès à : {chemin_enregistrement}')
 import pandas as pd
 
 # Chemin vers le fichier Excel
-fichier_excel = "C:\\Users\\ASUS TUF I5\\Desktop\\PFE\\ETUDE DU SECTEUR\\KPI\\PIB\\PIB\\fusion.xlsx"
+fichier_excel = "fusion.xlsx"
 
 # Charger le fichier Excel dans un DataFrame
 df = pd.read_excel(fichier_excel)
@@ -401,11 +399,11 @@ df = pd.read_excel(fichier_excel)
 df['Value'] = pd.to_numeric(df['Value'], errors='coerce')
 
 # Sauvegarder le DataFrame modifié dans un nouveau fichier Excel
-df.to_excel("C:\\Users\\ASUS TUF I5\\Desktop\\PFE\\ETUDE DU SECTEUR\\KPI\\PIB\\PIB\\fusion_modifie.xlsx", index=False)
+df.to_excel("fusion_modifie.xlsx", index=False)
 import pandas as pd
 
 # Charger les données
-data_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/PIBDone/PIB/PIBNew.xlsx'
+data_path = 'PIBNew.xlsx'
 df = pd.read_excel(data_path)
 
 # Afficher les premières lignes pour comprendre la structure des données
@@ -414,7 +412,7 @@ print(df.head())
 import pandas as pd
 
 # Charger les données
-data_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/PIB/PIBNew.xlsx'
+data_path = 'PIBNew.xlsx'
 df = pd.read_excel(data_path)
 
 # Afficher les premières lignes des données pour comprendre la structure
@@ -546,7 +544,6 @@ r2 = r2_score(df_tunisie_pib['PIB'], predictions)
 
 print(f'R²: {r2}')
 
-Regression Linéaire
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
 # Visualisation de l'autocorrélation
@@ -631,11 +628,10 @@ plt.show()
 
 predictions, r2_linear
 
-file_path = 'C:\\Users\\ASUS TUF I5\\Desktop\\PFE\\ETUDE DU SECTEUR\\KPI\\PIB\\predictions.xlsx'
+file_path = 'predictions.xlsx'
 predictions.to_excel(file_path, index=False)
 
 print("Predictions saved to Excel file successfully.")
-Forest Random
 from sklearn.ensemble import RandomForestRegressor
 forest_model = RandomForestRegressor(n_estimators=1000, random_state=42)
 
@@ -744,7 +740,7 @@ import matplotlib.pyplot as plt
 
 # Placeholder for loading the DataFrame
 # Replace 'path_to_your_file.xlsx' with the actual path to your Excel file
-path_to_your_file = 'C:/Users\/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/PIB/PIB/fusion.xlsx'
+path_to_your_file = 'fusion.xlsx'
 predictions = pd.read_excel(path_to_your_file, usecols=['Country Name', 'Year', 'Value'])
 
 # Convert 'Value' to numeric, coercing errors
@@ -772,7 +768,7 @@ import matplotlib.pyplot as plt
 
 # Placeholder for loading the DataFrame
 # Replace 'path_to_your_file.xlsx' with the actual path to your Excel file
-path_to_your_file = 'C:/Users\/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/PIB/PIB/fusion.xlsx'
+path_to_your_file = 'fusion.xlsx'
 # Assuming `predictions` is your DataFrame
 # Ensure 'Year' and 'Value' are sorted
 predictions.sort_values(['Country Name', 'Year'], inplace=True)
@@ -789,14 +785,14 @@ predictions.loc[predictions['Year'] == 2010, 'Percentage Change'] = 0
 print(predictions)
 
 # Enregistrer le DataFrame dans un fichier Excel spécifique
-chemin_enregistrement = r'C:\Users\ASUS TUF I5\Desktop\PFE\ETUDE DU SECTEUR\KPI\PIB\PIB\PIBPourcentafe.xlsx'
+chemin_enregistrement = r'PIBPourcentafe.xlsx'
 predictions.to_excel(chemin_enregistrement, index=False)
 
 print(f'Le DataFrame a été enregistré avec succès à : {chemin_enregistrement}')
 import pandas as pd
 
 # Chemin vers le fichier Excel
-fichier_excel = "C:\\Users\\ASUS TUF I5\\Desktop\\PFE\\ETUDE DU SECTEUR\\KPI\\PIB\\PIB\\fusion.xlsx"
+fichier_excel = "fusion.xlsx"
 
 # Charger le fichier Excel dans un DataFrame
 df = pd.read_excel(fichier_excel)
@@ -805,4 +801,4 @@ df = pd.read_excel(fichier_excel)
 df['Value'] = pd.to_numeric(df['Value'], errors='coerce')
 
 # Sauvegarder le DataFrame modifié dans un nouveau fichier Excel
-df.to_excel("C:\\Users\\ASUS TUF I5\\Desktop\\PFE\\ETUDE DU SECTEUR\\KPI\\PIB\\PIB\\fusion_modifie.xlsx", index=False)
+df.to_excel("fusion_modifie.xlsx", index=False)
