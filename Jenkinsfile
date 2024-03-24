@@ -14,14 +14,7 @@ pipeline {
        
       
         // Ajoutez ici les étapes pour l'entraînement et l'évaluation du modèle
-        stage('Entraînement du Modèle') {
-            steps {
-                script {
-                    // Assurez-vous que le script d'entraînement est bien configuré et accessible
-                    sh 'python General.py'
-                }
-            }
-        }
+        
         stage('Évaluation et Entrainement du Modèle') {
             steps {
                 script {
