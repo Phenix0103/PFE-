@@ -41,11 +41,7 @@ pipeline {
                 }
             }
         }
-        stage('Grafana') {
-            steps {
-                sh 'docker compose up -d'
-            }
-        }
+       
     }
     post {
         success {
