@@ -31,7 +31,7 @@ sh 'python3 PIB.py'
                     sh 'python3 levier.py'
                     sh 'python3 Gestion.py'
                     sh 'python3 Distribution.py'
-sh 'python3 Change.py'
+//sh 'python3 Change.py'
 
 
 
