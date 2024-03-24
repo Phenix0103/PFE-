@@ -34,7 +34,7 @@ credit_growth = credit_growth.round(2)
 credit_growth = credit_growth.T
 
 # Enregistrer les données calculées
-output_file_path = 'C:/Users/ASUS TUF I5/Downloads/Updated_EtudeSBF.xlsx'
+output_file_path = 'Updated_EtudeSBF.xlsx'
 with pd.ExcelWriter(output_file_path, engine='openpyxl') as writer:
     credit_growth.to_excel(writer, sheet_name='Credit2')
 
@@ -141,7 +141,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Charger les données
-file_path = 'C:/Users/ASUS TUF I5/Downloads/Updated_EtudeSBF.xlsx'
+file_path = 'Updated_EtudeSBF.xlsx'
 credit_growth = pd.read_excel(file_path, sheet_name='Credit2', index_col=0)
 
 # Classer la croissance selon des seuils prédéfinis
