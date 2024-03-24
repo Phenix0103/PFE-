@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Chemin vers le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialiser un DataFrame pour stocker les ROA de toutes les banques pour chaque année
@@ -74,7 +74,7 @@ for column in roa_df.columns:
 # Display the ROE predictions for each bank from 2023 to 2028
 roa_predictions_df
 # Transposer le DataFrame pour avoir les années en lignes et les banques en colonnes
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roapred.xlsx'
+output_file_path = 'roapred.xlsx'
 roa_predictions_df.to_excel(output_file_path)
 
 # Afficher un aperçu des données de ROA
@@ -87,7 +87,7 @@ merged_roa_df = pd.concat([roa_df, roa_predictions_df])
 print(merged_roa_df.head())  # Afficher seulement les premières lignes du DataFrame fusionné pour un aperçu
 
 # Chemin vers le fichier Excel de sortie pour le DataFrame fusionné
-output_merged_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_merged_file_path = 'merged_roa.xlsx'
 
 # Exporter le DataFrame fusionné au format Excel
 merged_roa_df.to_excel(output_merged_file_path)
@@ -143,7 +143,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -193,7 +193,7 @@ import numpy as np
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -233,7 +233,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -340,7 +340,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -402,7 +402,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
