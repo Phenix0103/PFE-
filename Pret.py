@@ -1,7 +1,7 @@
 import openpyxl
 
 # Charger le fichier Excel
-fichier_excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+fichier_excel_path = 'EtudeSB - Copie.xlsx'
 fichier_excel = openpyxl.load_workbook(fichier_excel_path)
 
 # Initialisation d'un dictionnaire pour stocker les totaux de prêts par année
@@ -51,7 +51,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 
 # Sauvegarder le graphique
-#graphique_path = "C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/evolution_prets_2010_2022.png"
+#graphique_path = "evolution_prets_2010_2022.png"
 #plt.savefig(graphique_path)
 
 plt.show() #graphique_path
@@ -65,7 +65,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 import numpy as np
 
 # Charger le fichier Excel (Ajustez le chemin selon votre environnement)
-fichier_excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+fichier_excel_path = 'EtudeSB - Copie.xlsx'
 fichier_excel = openpyxl.load_workbook(fichier_excel_path)
 
 totals_prets_numeriques_par_annee = {}
