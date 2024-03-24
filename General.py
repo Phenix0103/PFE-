@@ -1,5 +1,4 @@
 import pandas as pd
-
 # Chemin vers le fichier Excel
 file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
