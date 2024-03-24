@@ -490,7 +490,7 @@ predictions_df = pd.DataFrame(predictions, index=np.arange(2023, 2036))
 predictions_df
 
 # Chemin vers le fichier de sortie
-file_path = 'Credit/CreditBanque.xlsx'
+file_path = 'CreditBanque.xlsx'
 
 # Enregistrer le DataFrame dans un fichier Excel
 predictions_df.to_excel(file_path, index=True)
