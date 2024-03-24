@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'M2_HOME'
+        python 'Python' // Assurez-vous que le nom correspond à celui que vous avez configuré
     }
     stages {
         stage('GIT') {
@@ -10,19 +11,17 @@ pipeline {
                 url: 'https://github.com/Phenix0103/PFE-.git'
             }
         }
-     
-       
-      
-        // Ajoutez ici les étapes pour l'entraînement et l'évaluation du modèle
         
+        // Supposons que l'installation de dépendances Python et l'entraînement du modèle sont gérés par General.py
         stage('Évaluation et Entrainement du Modèle') {
             steps {
                 script {
-                    // Exécutez votre script d'évaluation, assurez-vous qu'il imprime des métriques de performance claires
-                    sh 'python General.py'
+                    // Exécutez votre script Python qui devrait gérer l'installation de dépendances
+                    sh 'python3 General.py' // Utilisez python3 qui est le chemin que vous avez configuré
                 }
             }
         }
+
         stage('Docker') {
             steps {
                 script {
