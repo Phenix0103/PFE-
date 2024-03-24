@@ -12,3 +12,4 @@ xgboost
 pmdarima
 openpyxl
 tabulate
+jinja2>=3.1.2
