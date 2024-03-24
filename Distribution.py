@@ -17,7 +17,7 @@ from datetime import datetime
 print("Bibliothèques importées avec succès.")
 
 # Chemin d'accès au fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Affichage des noms des feuilles pour comprendre la structure du classeur
@@ -87,7 +87,7 @@ import numpy as np
 import plotly.graph_objects as go
 
 # Chemin d'accès à votre fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Liste des banques sans doublons
@@ -131,7 +131,7 @@ import numpy as np
 import plotly.graph_objects as go
 
 # Chemin d'accès à votre fichier Excel - à ajuster selon votre environnement
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Liste des banques sans doublons
@@ -171,9 +171,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Chemin d'accès au fichier Excel original
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 # Chemin d'accès pour sauvegarder le nouveau fichier Excel
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Distribution des Assets/dat.xlsx'
+output_file_path = 'dat.xlsx'
 
 # Initialiser une liste pour stocker les données agrégées
 aggregated_data_list = []
@@ -215,7 +215,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Chemin d'accès au fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 
 # Initialiser un dictionnaire pour stocker les données agrégées par banque
 aggregated_data_by_bank = {}
@@ -257,7 +257,7 @@ plt.show()
 
 # Affichage du DataFrame
 print(aggregated_data_df)
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Distribution des Assets/datBanques.xlsx'
+output_file_path = 'datBanques.xlsx'
 aggregated_data_df.to_excel(output_file_path, index=False)
 
 
@@ -265,7 +265,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Chemin d'accès au fichier Excel - ajustez selon votre environnement
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 
 # Charger et agréger les données de chaque année
 aggregated_data_list = []
@@ -294,7 +294,7 @@ import plotly.express as px
 # Prepare the data for modeling
 X = aggregated_data.index.values.reshape(-1, 1)  # Reshape years for sklearn
 y = aggregated_data['Total Assets'].values
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/PredictionBA.xlsx'
+output_file_path = 'PredictionBA.xlsx'
 
 # Create and fit the model
 model = LinearRegression()
@@ -324,7 +324,7 @@ predictionsDA_df = pd.DataFrame({
 
 # Affichage du DataFrame
 print(predictionsDA_df)
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Distribution des Assets/PredictionAnnée.xlsx'
+output_file_path = 'PredictionAnnée.xlsx'
 predictionsDA_df.to_excel(output_file_path, index=False)
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -334,11 +334,11 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
 
 # Chemin d'accès au fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Charger les données agrégées
-aggregated_data_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/dat.xlsx'
+aggregated_data_path = 'dat.xlsx'
 aggregated_data = pd.read_excel(aggregated_data_path, index_col='Year')
 
 # Visualisation des actifs totaux sur la période étudiée
@@ -427,7 +427,7 @@ all_data = pd.DataFrame({
 
 # Affichage du DataFrame
 print(all_data)
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Distribution des Assets/TAB/Alldatafusion.xlsx'
+output_file_path = 'TAB/Alldatafusion.xlsx'
 all_data.to_excel(output_file_path, index=False)
 from sklearn.model_selection import train_test_split
 
@@ -585,7 +585,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
 # Chemin d'accès au fichier Excel - ajustez selon votre environnement
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Liste des banques pour itérer
