@@ -1989,7 +1989,7 @@ for year in range(2010, 2023):
     yearly_data_adapted['Passifs_Court_Terme'].append(passifs_ct)
     yearly_data_adapted['Ratio_Liquidite (%)'].append(ratio_liquidite)
 # Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'KPI/Gestion des passifs actifs/Yearly_Ratios_Summary.xlsx'
+output_file_path = 'Yearly_Ratios_Summary.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 
@@ -2140,7 +2140,7 @@ for bank in bilan_2022_df.columns[1:-1]:  # Exclure la première et la dernière
 # Enregistrer le DataFrame sous forme de fichier Excel
 # Convertir le dictionnaire en DataFrame pour une visualisation et une analyse faciles
 # Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'KPI/Gestion des passifs actifs/bANK_Ratios_Summary.xlsx'
+output_file_path = 'bANK_Ratios_Summary.xlsx'
 
 # Convertir le dictionnaire en DataFrame pour une visualisation et une analyse faciles
 bank_summary_df_adapted = pd.DataFrame(bank_data)
@@ -2298,7 +2298,7 @@ for year in range(2010, 2023):
         all_bank_data['Passifs_Court_Terme'].append(passifs_court_terme)
         all_bank_data['Ratio_Liquidite (%)'].append(ratio_liquidite)
  #Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'KPI/Gestion des passifs actifs/YearlyBank_Ratios_Summary.xlsx'
+output_file_path = 'YearlyBank_Ratios_Summary.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 yearly_summary_df_adapted.to_excel(output_file_path, sheet_name='Ratios Summary', index=False)
@@ -2343,7 +2343,7 @@ scaled_features = scaler.fit_transform(imputed_features)
 kmeans = KMeans(n_clusters=3, random_state=42)  # Ajustez le nombre de clusters si nécessaire
 banka_summary_df['Cluster'] = kmeans.fit_predict(scaled_features)
 #Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'KPI/Gestion des passifs actifs/cluster.xlsx'
+output_file_path = 'cluster.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 yearly_summary_df_adapted.to_excel(output_file_path, sheet_name='Ratios Summary', index=False)
@@ -2693,7 +2693,7 @@ import matplotlib.pyplot as plt
 # Chemin d'accès au fichier Excel original
 excel_path = 'EtudeSB - Copie.xlsx'
 # Chemin d'accès pour sauvegarder le nouveau fichier Excel
-output_file_path = 'KPI/Distribution des Assets/dat.xlsx'
+output_file_path = 'dat.xlsx'
 
 # Initialiser une liste pour stocker les données agrégées
 aggregated_data_list = []
@@ -2777,7 +2777,7 @@ plt.show()
 
 # Affichage du DataFrame
 print(aggregated_data_df)
-output_file_path = 'KPI/Distribution des Assets/datBanques.xlsx'
+output_file_path = 'datBanques.xlsx'
 aggregated_data_df.to_excel(output_file_path, index=False)
 
 
@@ -2844,7 +2844,7 @@ predictionsDA_df = pd.DataFrame({
 
 # Affichage du DataFrame
 print(predictionsDA_df)
-output_file_path = 'KPI/Distribution des Assets/PredictionAnnée.xlsx'
+output_file_path = 'PredictionAnnée.xlsx'
 predictionsDA_df.to_excel(output_file_path, index=False)
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -2947,7 +2947,7 @@ all_data = pd.DataFrame({
 
 # Affichage du DataFrame
 print(all_data)
-output_file_path = 'KPI/Distribution des Assets/TAB/Alldatafusion.xlsx'
+output_file_path = 'Alldatafusion.xlsx'
 all_data.to_excel(output_file_path, index=False)
 from sklearn.model_selection import train_test_split
 
@@ -3239,7 +3239,7 @@ credit_growth = credit_growth.round(2)
 credit_growth = credit_growth.T
 
 # Enregistrer les données calculées
-output_file_path = 'C:/Users/ASUS TUF I5/Downloads/Updated_EtudeSBF.xlsx'
+output_file_path = 'Updated_EtudeSBF.xlsx'
 with pd.ExcelWriter(output_file_path, engine='openpyxl') as writer:
     credit_growth.to_excel(writer, sheet_name='Credit2')
 
@@ -3499,7 +3499,7 @@ print(predictions_df)
 
 # Enregistrement des prédictions dans un fichier Excel
 # Note: Changez le chemin en fonction de votre système d'exploitation et de votre environnement
-output_file_path = 'KPI/Croissance du credit/predictions_croissance_credit.xlsx'
+output_file_path = 'predictions_croissance_credit.xlsx'
 
 predictions_df.to_excel(output_file_path, index=False)
 
