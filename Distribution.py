@@ -427,7 +427,7 @@ all_data = pd.DataFrame({
 
 # Affichage du DataFrame
 print(all_data)
-output_file_path = 'TAB/Alldatafusion.xlsx'
+output_file_path = 'Alldatafusion.xlsx'
 all_data.to_excel(output_file_path, index=False)
 from sklearn.model_selection import train_test_split
 
