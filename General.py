@@ -1,6 +1,6 @@
 import pandas as pd
 # Chemin vers le fichier Excel
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialiser un DataFrame pour stocker les ROE de toutes les banques pour chaque année
@@ -36,7 +36,7 @@ import pandas as pd
 import numpy as np
 
 # Load the provided Excel file
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialize an empty DataFrame to collect ROE data
@@ -454,7 +454,7 @@ plt.show()
 import pandas as pd
 
 # Chemin vers le fichier Excel
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialiser un DataFrame pour stocker les ROA de toutes les banques pour chaque année
@@ -686,7 +686,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'merged_roa.xlsx'
+output_file_path =  'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -914,7 +914,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Chargement du fichier Excel
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Initialisation d'un DataFrame pour stocker les résultats
@@ -979,7 +979,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Chargement du fichier Excel
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Initialisation d'un DataFrame pour stocker les résultats
@@ -1135,7 +1135,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 
 # Sauvegarder le graphique
-#graphique_path = "C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/evolution_prets_2010_2022.png"
+#graphique_path = " evolution_prets_2010_2022.png"
 #plt.savefig(graphique_path)
 
 plt.show() #graphique_path
@@ -1235,7 +1235,7 @@ plt.legend()
 plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 # Function to extract financial leverage data from the balance sheet
 # This function will try to handle cases where the lookup fails by returning None
@@ -1273,7 +1273,7 @@ leverage_results_updated.set_index('Year', inplace=True)
 
 
 # Définir le chemin complet du fichier Excel de sortie pour les résultats de l'effet de levier financier
-output_leverage_excel_path = 'leverage_results.xlsx'
+output_leverage_excel_path = 'KPI/Levier/leverage_results.xlsx'
 
 # Exporter le DataFrame des résultats de l'effet de levier financier dans un fichier Excel
 leverage_results_updated.to_excel(output_leverage_excel_path)
@@ -1367,7 +1367,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-XGBOOST
+
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
@@ -1387,7 +1387,7 @@ r2_xgb = r2_score(y_test, y_pred_xgb)
 print(f"RMSE (XGBoost) sur l'ensemble de test: {rmse_xgb}")
 print(f"R2 (XGBoost) sur l'ensemble de test: {r2_xgb}")
 
-Arima
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -1476,7 +1476,7 @@ import os
 from pathlib import Path
 
 # Define the path to the Excel file
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Helper function to extract financial data
@@ -1672,7 +1672,6 @@ df = pd.DataFrame({
 
 print(df)
 
-Banque
 def extract_leverage_data_by_bank(sheet_name, file_path):
     # Load the sheet into a DataFrame
     df = pd.read_excel(file_path, sheet_name=sheet_name)
@@ -1697,7 +1696,7 @@ import matplotlib.pyplot as plt
 # extract_leverage_data_by_bank(sheet_name, file_path)
 
 # Load the Excel file
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Create a dictionary to store data for each bank
@@ -1931,7 +1930,7 @@ plt.show()
 import pandas as pd
 
 # Chemin d'accès au fichier Excel ajusté pour l'environnement actuel
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 def calculate_ratios_for_year_adapted(bilan_df):
@@ -1990,7 +1989,7 @@ for year in range(2010, 2023):
     yearly_data_adapted['Passifs_Court_Terme'].append(passifs_ct)
     yearly_data_adapted['Ratio_Liquidite (%)'].append(ratio_liquidite)
 # Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'Yearly_Ratios_Summary.xlsx'
+output_file_path = 'KPI/Gestion des passifs actifs/Yearly_Ratios_Summary.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 
@@ -2141,7 +2140,7 @@ for bank in bilan_2022_df.columns[1:-1]:  # Exclure la première et la dernière
 # Enregistrer le DataFrame sous forme de fichier Excel
 # Convertir le dictionnaire en DataFrame pour une visualisation et une analyse faciles
 # Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'bANK_Ratios_Summary.xlsx'
+output_file_path = 'KPI/Gestion des passifs actifs/bANK_Ratios_Summary.xlsx'
 
 # Convertir le dictionnaire en DataFrame pour une visualisation et une analyse faciles
 bank_summary_df_adapted = pd.DataFrame(bank_data)
@@ -2299,7 +2298,7 @@ for year in range(2010, 2023):
         all_bank_data['Passifs_Court_Terme'].append(passifs_court_terme)
         all_bank_data['Ratio_Liquidite (%)'].append(ratio_liquidite)
  #Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'YearlyBank_Ratios_Summary.xlsx'
+output_file_path = 'KPI/Gestion des passifs actifs/YearlyBank_Ratios_Summary.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 yearly_summary_df_adapted.to_excel(output_file_path, sheet_name='Ratios Summary', index=False)
@@ -2344,7 +2343,7 @@ scaled_features = scaler.fit_transform(imputed_features)
 kmeans = KMeans(n_clusters=3, random_state=42)  # Ajustez le nombre de clusters si nécessaire
 banka_summary_df['Cluster'] = kmeans.fit_predict(scaled_features)
 #Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'cluster.xlsx'
+output_file_path = 'KPI/Gestion des passifs actifs/cluster.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 yearly_summary_df_adapted.to_excel(output_file_path, sheet_name='Ratios Summary', index=False)
@@ -2694,7 +2693,7 @@ import matplotlib.pyplot as plt
 # Chemin d'accès au fichier Excel original
 excel_path = 'EtudeSB - Copie.xlsx'
 # Chemin d'accès pour sauvegarder le nouveau fichier Excel
-output_file_path = 'dat.xlsx'
+output_file_path = 'KPI/Distribution des Assets/dat.xlsx'
 
 # Initialiser une liste pour stocker les données agrégées
 aggregated_data_list = []
@@ -2778,7 +2777,7 @@ plt.show()
 
 # Affichage du DataFrame
 print(aggregated_data_df)
-output_file_path = 'datBanques.xlsx'
+output_file_path = 'KPI/Distribution des Assets/datBanques.xlsx'
 aggregated_data_df.to_excel(output_file_path, index=False)
 
 
@@ -2845,7 +2844,7 @@ predictionsDA_df = pd.DataFrame({
 
 # Affichage du DataFrame
 print(predictionsDA_df)
-output_file_path = 'PredictionAnnée.xlsx'
+output_file_path = 'KPI/Distribution des Assets/PredictionAnnée.xlsx'
 predictionsDA_df.to_excel(output_file_path, index=False)
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -2948,7 +2947,7 @@ all_data = pd.DataFrame({
 
 # Affichage du DataFrame
 print(all_data)
-output_file_path = 'Alldatafusion.xlsx'
+output_file_path = 'KPI/Distribution des Assets/TAB/Alldatafusion.xlsx'
 all_data.to_excel(output_file_path, index=False)
 from sklearn.model_selection import train_test_split
 
@@ -3211,7 +3210,7 @@ import seaborn as sns
 import plotly.express as px
 
 # Charger les données
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 all_data = pd.read_excel(file_path, sheet_name=None)
 
 # Initialiser un DataFrame pour le taux de croissance
@@ -3240,7 +3239,7 @@ credit_growth = credit_growth.round(2)
 credit_growth = credit_growth.T
 
 # Enregistrer les données calculées
-output_file_path = 'Updated_EtudeSBF.xlsx'
+output_file_path = 'C:/Users/ASUS TUF I5/Downloads/Updated_EtudeSBF.xlsx'
 with pd.ExcelWriter(output_file_path, engine='openpyxl') as writer:
     credit_growth.to_excel(writer, sheet_name='Credit2')
 
@@ -3347,7 +3346,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Charger les données
-file_path = 'Updated_EtudeSBF.xlsx'
+file_path = 'C:/Users/ASUS TUF I5/Downloads/Updated_EtudeSBF.xlsx'
 credit_growth = pd.read_excel(file_path, sheet_name='Credit2', index_col=0)
 
 # Classer la croissance selon des seuils prédéfinis
@@ -3374,11 +3373,11 @@ plt.ylabel('Nombre de Banques')
 plt.legend(title='Classification')
 plt.show()
 
-Année
+
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire pour comprendre sa structure
@@ -3500,7 +3499,7 @@ print(predictions_df)
 
 # Enregistrement des prédictions dans un fichier Excel
 # Note: Changez le chemin en fonction de votre système d'exploitation et de votre environnement
-output_file_path = 'predictions_croissance_credit.xlsx'
+output_file_path = 'KPI/Croissance du credit/predictions_croissance_credit.xlsx'
 
 predictions_df.to_excel(output_file_path, index=False)
 
@@ -3509,7 +3508,7 @@ print(f"Le fichier a été enregistré avec succès à l'emplacement suivant: {o
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'EtudeSB - Copie.xlsx'
+file_path= 'EtudeSB - Copie.xlsx'
 
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire
 all_data = pd.read_excel(file_path, sheet_name=None)
@@ -3663,7 +3662,7 @@ print(f"Le fichier a été enregistré avec succès à l'emplacement suivant: {o
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'Credit/Credit.xlsx'
+file_path = 'Credit.xlsx'
 credit_growth_df = pd.read_excel(file_path)
 
 # Afficher les premières lignes pour vérifier la structure
@@ -3696,7 +3695,7 @@ predictions_df = pd.DataFrame(predictions, index=np.arange(2023, 2036))
 predictions_df
 
 # Chemin vers le fichier de sortie
-file_path = 'CreditBanque.xlsx'
+file_path = 'KPI/Croissance du credit/Credit/CreditBanque.xlsx'
 
 # Enregistrer le DataFrame dans un fichier Excel
 predictions_df.to_excel(file_path, index=True)
@@ -3730,7 +3729,7 @@ for col in columns_to_keep:
 # Affichage des premières lignes pour vérification
 print(change_df_filtered.head())
 
-Dollar
+
 # Sélection de la variable à prédire
 target = 'Dollar des USA'
 
@@ -3762,7 +3761,7 @@ r2 = r2_score(y_test, y_pred)
 print(f"MSE: {mse}")
 print(f"R^2: {r2}")
 
-Euro
+
 # Sélection de la variable à prédire
 target = 'EURO'
 
@@ -4138,7 +4137,7 @@ plt.tight_layout()
 # Afficher le DataFrame des prévisions
 forecasts_df
 
-Arima
+
 from sklearn.metrics import mean_squared_error
 from math import sqrt
 import numpy as np
@@ -4413,7 +4412,7 @@ print(predictions)
 predictions.to_excel("predictions_devises.xlsx", index=False)
 
 # Save the predictions to an Excel file
-predictions_output_path = 'future_predictions.xlsx'
+predictions_output_path = 'KPI/Change/data/future_predictions.xlsx'
 predictions.to_excel(predictions_output_path, index=False)
 
 # Tracé des prédictions futures pour chaque devise
