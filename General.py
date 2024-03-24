@@ -3346,7 +3346,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Charger les données
-file_path = 'C:/Users/ASUS TUF I5/Downloads/Updated_EtudeSBF.xlsx'
+file_path = 'Updated_EtudeSBF.xlsx'
 credit_growth = pd.read_excel(file_path, sheet_name='Credit2', index_col=0)
 
 # Classer la croissance selon des seuils prédéfinis
