@@ -50,23 +50,22 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import SelectKBest, f_regression
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.model_selection import GridSearchCV
-# Création du pipeline avec un imputer
+
+# Création du pipeline
 pipeline = Pipeline([
-    ('imputer', SimpleImputer(strategy='mean')), # Remplace les NaN par la moyenne de la colonne
-    ('scaler', StandardScaler()),
-    ('feature_selection', SelectKBest(score_func=f_regression, k='all')),
-    ('knn', KNeighborsRegressor())
+    ('imputer', SimpleImputer(strategy='mean')),  # Impute les NaN par la moyenne
+    ('scaler', StandardScaler()),  # Normalisation des caractéristiques
+    ('feature_selection', SelectKBest(score_func=f_regression, k='all')),  # Sélection des caractéristiques
+    ('knn', KNeighborsRegressor())  # Modèle KNN
 ])
 
-# Configuration du GridSearchCV avec le pipeline
+# Configuration de GridSearchCV
 param_grid = {'knn__n_neighbors': range(1, 30)}
 grid_search = GridSearchCV(pipeline, param_grid, cv=5, scoring='neg_mean_squared_error')
 
-# Exécution du GridSearchCV avec vos données d'entraînement X_train et y_train
-# Assurez-vous que vos données d'entraînement ne contiennent pas de colonnes non numériques ou assurez-vous de les traiter avant de les passer à GridSearchCV
+# Exécution de GridSearchCV sur les données d'entraînement
 grid_search.fit(X_train, y_train)
 
-print("Meilleur paramètre K:", grid_search.best_params_)
 # Création du modèle KNN
 knn = KNeighborsRegressor(n_neighbors=5)
 
