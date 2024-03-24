@@ -1,6 +1,6 @@
 import pandas as pd
 # Chemin vers le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialiser un DataFrame pour stocker les ROE de toutes les banques pour chaque année
@@ -36,7 +36,7 @@ import pandas as pd
 import numpy as np
 
 # Load the provided Excel file
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialize an empty DataFrame to collect ROE data
@@ -103,7 +103,7 @@ for column in roe_df.columns:
 # Display the ROE predictions for each bank from 2023 to 2028
 roe_predictions_df
 # Transposer le DataFrame pour avoir les années en lignes et les banques en colonnes
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roepred.xlsx'
+output_file_path = 'roepred.xlsx'
 roe_predictions_df.to_excel(output_file_path)
 
 # Afficher un aperçu des données de ROA
@@ -116,7 +116,7 @@ merged_df = pd.concat([roe_df, roe_predictions_df])
 print(merged_df.head())  # Afficher seulement les premières lignes du DataFrame fusionné pour un aperçu
 
 # Chemin vers le fichier Excel de sortie pour le DataFrame fusionné
-output_merged_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roe.xlsx'
+output_merged_file_path = 'merged_roe.xlsx'
 
 # Exporter le DataFrame fusionné au format Excel
 merged_df.to_excel(output_merged_file_path)
@@ -172,7 +172,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roe.xlsx'
+output_file_path = 'roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -222,7 +222,7 @@ import numpy as np
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roe.xlsx'
+output_file_path = 'roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -262,7 +262,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roe.xlsx'
+output_file_path = 'roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -369,7 +369,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roe.xlsx'
+output_file_path = 'roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -454,7 +454,7 @@ plt.show()
 import pandas as pd
 
 # Chemin vers le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialiser un DataFrame pour stocker les ROA de toutes les banques pour chaque année
@@ -527,7 +527,7 @@ for column in roa_df.columns:
 # Display the ROE predictions for each bank from 2023 to 2028
 roa_predictions_df
 # Transposer le DataFrame pour avoir les années en lignes et les banques en colonnes
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roapred.xlsx'
+output_file_path = 'roapred.xlsx'
 roa_predictions_df.to_excel(output_file_path)
 
 # Afficher un aperçu des données de ROA
@@ -540,7 +540,7 @@ merged_roa_df = pd.concat([roa_df, roa_predictions_df])
 print(merged_roa_df.head())  # Afficher seulement les premières lignes du DataFrame fusionné pour un aperçu
 
 # Chemin vers le fichier Excel de sortie pour le DataFrame fusionné
-output_merged_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_merged_file_path = 'merged_roa.xlsx'
 
 # Exporter le DataFrame fusionné au format Excel
 merged_roa_df.to_excel(output_merged_file_path)
@@ -596,7 +596,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -646,7 +646,7 @@ import numpy as np
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -686,7 +686,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -793,7 +793,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -855,7 +855,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roa.xlsx'
+output_file_path = 'merged_roa.xlsx'
 
 # Charger les données à partir du fichier Excel
 roa_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -914,7 +914,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Chargement du fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Initialisation d'un DataFrame pour stocker les résultats
@@ -979,7 +979,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Chargement du fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Initialisation d'un DataFrame pour stocker les résultats
@@ -1085,7 +1085,7 @@ print(cluster_table)
 import openpyxl
 
 # Charger le fichier Excel
-fichier_excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+fichier_excel_path = 'EtudeSB - Copie.xlsx'
 fichier_excel = openpyxl.load_workbook(fichier_excel_path)
 
 # Initialisation d'un dictionnaire pour stocker les totaux de prêts par année
@@ -1149,7 +1149,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 import numpy as np
 
 # Charger le fichier Excel (Ajustez le chemin selon votre environnement)
-fichier_excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+fichier_excel_path = 'EtudeSB - Copie.xlsx'
 fichier_excel = openpyxl.load_workbook(fichier_excel_path)
 
 totals_prets_numeriques_par_annee = {}
@@ -1235,7 +1235,7 @@ plt.legend()
 plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 # Function to extract financial leverage data from the balance sheet
 # This function will try to handle cases where the lookup fails by returning None
@@ -1273,7 +1273,7 @@ leverage_results_updated.set_index('Year', inplace=True)
 
 
 # Définir le chemin complet du fichier Excel de sortie pour les résultats de l'effet de levier financier
-output_leverage_excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Levier/leverage_results.xlsx'
+output_leverage_excel_path = 'leverage_results.xlsx'
 
 # Exporter le DataFrame des résultats de l'effet de levier financier dans un fichier Excel
 leverage_results_updated.to_excel(output_leverage_excel_path)
@@ -1301,7 +1301,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
 # Charger les données
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Levier/leverage_results.xlsx'
+file_path = 'leverage_results.xlsx'
 leverage_data = pd.read_excel(file_path, index_col='Year')
 
 # Préparation des données
@@ -1476,7 +1476,7 @@ import os
 from pathlib import Path
 
 # Define the path to the Excel file
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Helper function to extract financial data
@@ -1515,7 +1515,7 @@ financial_analysis_results.sort_values('Year', inplace=True)
 financial_analysis_results.set_index('Year', inplace=True)
 
 # Export the enhanced financial analysis to a new Excel file
-output_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/enhanced_financial_analysis.xlsx' 
+output_path = 'enhanced_financial_analysis.xlsx' 
 financial_analysis_results.to_excel(output_path)
 
 # Plotting multiple financial metrics over the years
@@ -1697,7 +1697,7 @@ import matplotlib.pyplot as plt
 # extract_leverage_data_by_bank(sheet_name, file_path)
 
 # Load the Excel file
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Create a dictionary to store data for each bank
@@ -1931,7 +1931,7 @@ plt.show()
 import pandas as pd
 
 # Chemin d'accès au fichier Excel ajusté pour l'environnement actuel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 def calculate_ratios_for_year_adapted(bilan_df):
@@ -1990,7 +1990,7 @@ for year in range(2010, 2023):
     yearly_data_adapted['Passifs_Court_Terme'].append(passifs_ct)
     yearly_data_adapted['Ratio_Liquidite (%)'].append(ratio_liquidite)
 # Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Gestion des passifs actifs/Yearly_Ratios_Summary.xlsx'
+output_file_path = 'Yearly_Ratios_Summary.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 
@@ -2141,7 +2141,7 @@ for bank in bilan_2022_df.columns[1:-1]:  # Exclure la première et la dernière
 # Enregistrer le DataFrame sous forme de fichier Excel
 # Convertir le dictionnaire en DataFrame pour une visualisation et une analyse faciles
 # Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Gestion des passifs actifs/bANK_Ratios_Summary.xlsx'
+output_file_path = 'bANK_Ratios_Summary.xlsx'
 
 # Convertir le dictionnaire en DataFrame pour une visualisation et une analyse faciles
 bank_summary_df_adapted = pd.DataFrame(bank_data)
@@ -2299,7 +2299,7 @@ for year in range(2010, 2023):
         all_bank_data['Passifs_Court_Terme'].append(passifs_court_terme)
         all_bank_data['Ratio_Liquidite (%)'].append(ratio_liquidite)
  #Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Gestion des passifs actifs/YearlyBank_Ratios_Summary.xlsx'
+output_file_path = 'YearlyBank_Ratios_Summary.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 yearly_summary_df_adapted.to_excel(output_file_path, sheet_name='Ratios Summary', index=False)
@@ -2344,7 +2344,7 @@ scaled_features = scaler.fit_transform(imputed_features)
 kmeans = KMeans(n_clusters=3, random_state=42)  # Ajustez le nombre de clusters si nécessaire
 banka_summary_df['Cluster'] = kmeans.fit_predict(scaled_features)
 #Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Gestion des passifs actifs/cluster.xlsx'
+output_file_path = 'cluster.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 yearly_summary_df_adapted.to_excel(output_file_path, sheet_name='Ratios Summary', index=False)
@@ -2538,7 +2538,7 @@ from datetime import datetime
 print("Bibliothèques importées avec succès.")
 
 # Chemin d'accès au fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Affichage des noms des feuilles pour comprendre la structure du classeur
@@ -2608,7 +2608,7 @@ import numpy as np
 import plotly.graph_objects as go
 
 # Chemin d'accès à votre fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Liste des banques sans doublons
@@ -2652,7 +2652,7 @@ import numpy as np
 import plotly.graph_objects as go
 
 # Chemin d'accès à votre fichier Excel - à ajuster selon votre environnement
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Liste des banques sans doublons
@@ -2692,9 +2692,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Chemin d'accès au fichier Excel original
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 # Chemin d'accès pour sauvegarder le nouveau fichier Excel
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Distribution des Assets/dat.xlsx'
+output_file_path = 'dat.xlsx'
 
 # Initialiser une liste pour stocker les données agrégées
 aggregated_data_list = []
@@ -2736,7 +2736,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Chemin d'accès au fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 
 # Initialiser un dictionnaire pour stocker les données agrégées par banque
 aggregated_data_by_bank = {}
@@ -2778,7 +2778,7 @@ plt.show()
 
 # Affichage du DataFrame
 print(aggregated_data_df)
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Distribution des Assets/datBanques.xlsx'
+output_file_path = 'datBanques.xlsx'
 aggregated_data_df.to_excel(output_file_path, index=False)
 
 
@@ -2786,7 +2786,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Chemin d'accès au fichier Excel - ajustez selon votre environnement
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 
 # Charger et agréger les données de chaque année
 aggregated_data_list = []
@@ -2815,7 +2815,7 @@ import plotly.express as px
 # Prepare the data for modeling
 X = aggregated_data.index.values.reshape(-1, 1)  # Reshape years for sklearn
 y = aggregated_data['Total Assets'].values
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/PredictionBA.xlsx'
+output_file_path = 'PredictionBA.xlsx'
 
 # Create and fit the model
 model = LinearRegression()
@@ -2845,7 +2845,7 @@ predictionsDA_df = pd.DataFrame({
 
 # Affichage du DataFrame
 print(predictionsDA_df)
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Distribution des Assets/PredictionAnnée.xlsx'
+output_file_path = 'PredictionAnnée.xlsx'
 predictionsDA_df.to_excel(output_file_path, index=False)
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -2855,11 +2855,11 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
 
 # Chemin d'accès au fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Charger les données agrégées
-aggregated_data_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/dat.xlsx'
+aggregated_data_path = 'dat.xlsx'
 aggregated_data = pd.read_excel(aggregated_data_path, index_col='Year')
 
 # Visualisation des actifs totaux sur la période étudiée
@@ -2948,7 +2948,7 @@ all_data = pd.DataFrame({
 
 # Affichage du DataFrame
 print(all_data)
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Distribution des Assets/TAB/Alldatafusion.xlsx'
+output_file_path = 'Alldatafusion.xlsx'
 all_data.to_excel(output_file_path, index=False)
 from sklearn.model_selection import train_test_split
 
@@ -3106,7 +3106,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
 # Chemin d'accès au fichier Excel - ajustez selon votre environnement
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+excel_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(excel_path)
 
 # Liste des banques pour itérer
@@ -3211,7 +3211,7 @@ import seaborn as sns
 import plotly.express as px
 
 # Charger les données
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 all_data = pd.read_excel(file_path, sheet_name=None)
 
 # Initialiser un DataFrame pour le taux de croissance
@@ -3240,7 +3240,7 @@ credit_growth = credit_growth.round(2)
 credit_growth = credit_growth.T
 
 # Enregistrer les données calculées
-output_file_path = 'C:/Users/ASUS TUF I5/Downloads/Updated_EtudeSBF.xlsx'
+output_file_path = 'Updated_EtudeSBF.xlsx'
 with pd.ExcelWriter(output_file_path, engine='openpyxl') as writer:
     credit_growth.to_excel(writer, sheet_name='Credit2')
 
@@ -3347,7 +3347,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Charger les données
-file_path = 'C:/Users/ASUS TUF I5/Downloads/Updated_EtudeSBF.xlsx'
+file_path = 'Updated_EtudeSBF.xlsx'
 credit_growth = pd.read_excel(file_path, sheet_name='Credit2', index_col=0)
 
 # Classer la croissance selon des seuils prédéfinis
@@ -3378,7 +3378,7 @@ Année
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire pour comprendre sa structure
@@ -3500,7 +3500,7 @@ print(predictions_df)
 
 # Enregistrement des prédictions dans un fichier Excel
 # Note: Changez le chemin en fonction de votre système d'exploitation et de votre environnement
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Croissance du credit/predictions_croissance_credit.xlsx'
+output_file_path = 'predictions_croissance_credit.xlsx'
 
 predictions_df.to_excel(output_file_path, index=False)
 
@@ -3509,7 +3509,7 @@ print(f"Le fichier a été enregistré avec succès à l'emplacement suivant: {o
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire
 all_data = pd.read_excel(file_path, sheet_name=None)
@@ -3663,7 +3663,7 @@ print(f"Le fichier a été enregistré avec succès à l'emplacement suivant: {o
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Croissance du credit/Credit/Credit.xlsx'
+file_path = 'Credit/Credit.xlsx'
 credit_growth_df = pd.read_excel(file_path)
 
 # Afficher les premières lignes pour vérifier la structure
@@ -3696,7 +3696,7 @@ predictions_df = pd.DataFrame(predictions, index=np.arange(2023, 2036))
 predictions_df
 
 # Chemin vers le fichier de sortie
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Croissance du credit/Credit/CreditBanque.xlsx'
+file_path = 'CreditBanque.xlsx'
 
 # Enregistrer le DataFrame dans un fichier Excel
 predictions_df.to_excel(file_path, index=True)
@@ -3707,7 +3707,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
 # Chemin du fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/changee.xlsx'
+excel_path = 'changee.xlsx'
 
 # Nom de la feuille de calcul à lire
 sheet_name = 'Feuil1'
@@ -3834,7 +3834,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectKBest, f_regression
 
 # Chargement des données
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/changee.xlsx'
+excel_path = 'changee.xlsx'
 sheet_name = 'Feuil1'
 df = pd.read_excel(excel_path, sheet_name=sheet_name)
 
@@ -4413,7 +4413,7 @@ print(predictions)
 predictions.to_excel("predictions_devises.xlsx", index=False)
 
 # Save the predictions to an Excel file
-predictions_output_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Change/data/future_predictions.xlsx'
+predictions_output_path = 'future_predictions.xlsx'
 predictions.to_excel(predictions_output_path, index=False)
 
 # Tracé des prédictions futures pour chaque devise
@@ -4500,7 +4500,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
 # Chemin du fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/changee.xlsx'
+excel_path = 'changee.xlsx'
 
 # Nom de la feuille de calcul à lire
 sheet_name = 'Feuil1'
