@@ -40,7 +40,7 @@ sh 'python3 PIB.py'
                 }
             }
         }
-stage('MVN SONARQUBE') {
+/*stage('MVN SONARQUBE') {
             steps {
                 sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=cyrine -Dmaven.test.skip=true';
             }
@@ -51,7 +51,7 @@ stage('NEXUS'){
                  sh 'mvn deploy';
             }
         }
-       
+       */
     }
   /*  post {
         success {
