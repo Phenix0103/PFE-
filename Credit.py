@@ -457,7 +457,7 @@ print(f"Le fichier a été enregistré avec succès à l'emplacement suivant: {o
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'Credit/Credit.xlsx'
+file_path = 'Credit.xlsx'
 credit_growth_df = pd.read_excel(file_path)
 
 # Afficher les premières lignes pour vérifier la structure
