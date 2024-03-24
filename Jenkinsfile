@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools {
         maven 'M2_HOME'
-python 'Python'
     }
     stages {
         stage('GIT') {
