@@ -12,7 +12,32 @@ sheet_name = 'Feuil1'
 
 # Lecture du fichier Excel dans un DataFrame
 change_df = pd.read_excel(excel_path, sheet_name=sheet_name)
+# Appliquer l'imputation avant la division des données pour s'assurer qu'il n'y a pas de NaN
+imputer = SimpleImputer(strategy='mean')
+df_imputed = imputer.fit_transform(df)
+df_imputed = pd.DataFrame(df_imputed, columns=df.columns)
 
+# Séparation des caractéristiques et de la cible, et division des données
+X = df_imputed[['Yen Japonais', 'EURO']]  # Assurez-vous que ce sont les bonnes colonnes
+y = df_imputed['Dollar des USA']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Configuration du Pipeline (sans imputer puisque nous avons déjà imputé les données)
+pipeline = Pipeline([
+    ('scaler', StandardScaler()),
+    ('feature_selection', SelectKBest(score_func=f_regression, k='all')),
+    ('knn', KNeighborsRegressor())
+])
+
+# Configuration de GridSearchCV
+param_grid = {'knn__n_neighbors': range(1, 30)}
+grid_search = GridSearchCV(pipeline, param_grid, cv=5, scoring='neg_mean_squared_error')
+
+# Exécution de GridSearchCV sur les données d'entraînement pré-imputées
+grid_search.fit(X_train, y_train)
+
+# Affichage des résultats
+print("Meilleur paramètre K:", grid_search.best_params_)
 # Filtration des colonnes nécessaires
 columns_to_keep = ['Dollar des USA', 'Yen Japonais', 'EURO']
 date_column = [col for col in change_df.columns if 'Date' in col][0]
@@ -43,28 +68,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
-
-from sklearn.impute import SimpleImputer
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.feature_selection import SelectKBest, f_regression
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.model_selection import GridSearchCV
-
-# Création du pipeline
-pipeline = Pipeline([
-    ('imputer', SimpleImputer(strategy='mean')),  # Impute les NaN par la moyenne
-    ('scaler', StandardScaler()),  # Normalisation des caractéristiques
-    ('feature_selection', SelectKBest(score_func=f_regression, k='all')),  # Sélection des caractéristiques
-    ('knn', KNeighborsRegressor())  # Modèle KNN
-])
-
-# Configuration de GridSearchCV
-param_grid = {'knn__n_neighbors': range(1, 30)}
-grid_search = GridSearchCV(pipeline, param_grid, cv=5, scoring='neg_mean_squared_error')
-
-# Exécution de GridSearchCV sur les données d'entraînement
-grid_search.fit(X_train, y_train)
 
 # Création du modèle KNN
 knn = KNeighborsRegressor(n_neighbors=5)
