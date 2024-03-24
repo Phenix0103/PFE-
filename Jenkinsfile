@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('GIT') {
             steps {
-                git branch: 'Master',
+                git branch: 'master',
                 url: 'https://github.com/Phenix0103/PFE-.git'
             }
         }
