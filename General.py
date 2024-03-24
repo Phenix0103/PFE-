@@ -1273,7 +1273,7 @@ leverage_results_updated.set_index('Year', inplace=True)
 
 
 # Définir le chemin complet du fichier Excel de sortie pour les résultats de l'effet de levier financier
-output_leverage_excel_path = 'KPI/Levier/leverage_results.xlsx'
+output_leverage_excel_path = 'leverage_results.xlsx'
 
 # Exporter le DataFrame des résultats de l'effet de levier financier dans un fichier Excel
 leverage_results_updated.to_excel(output_leverage_excel_path)
@@ -3695,7 +3695,7 @@ predictions_df = pd.DataFrame(predictions, index=np.arange(2023, 2036))
 predictions_df
 
 # Chemin vers le fichier de sortie
-file_path = 'KPI/Croissance du credit/Credit/CreditBanque.xlsx'
+file_path = 'CreditBanque.xlsx'
 
 # Enregistrer le DataFrame dans un fichier Excel
 predictions_df.to_excel(file_path, index=True)
@@ -4412,7 +4412,7 @@ print(predictions)
 predictions.to_excel("predictions_devises.xlsx", index=False)
 
 # Save the predictions to an Excel file
-predictions_output_path = 'KPI/Change/data/future_predictions.xlsx'
+predictions_output_path = 'future_predictions.xlsx'
 predictions.to_excel(predictions_output_path, index=False)
 
 # Tracé des prédictions futures pour chaque devise
