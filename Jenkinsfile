@@ -10,31 +10,9 @@ pipeline {
                 url: 'https://github.com/Phenix0103/PFE-.git'
             }
         }
-        stage('MVN CLEAN') {
-            steps {
-                sh 'mvn clean';
-            }
-        }
-        stage('MVN COMPILE') {
-            steps {
-                sh 'mvn compile';
-            }
-        }
-        stage('MVN SONARQUBE') {
-            steps {
-                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=cyrine -Dmaven.test.skip=true';
-            }
-        }
-        stage('MOCKITO'){
-            steps {
-                 sh 'mvn test';
-            }
-        }
-        stage('NEXUS'){
-            steps {
-                 sh 'mvn deploy';
-            }
-        }
+     
+       
+      
         // Ajoutez ici les étapes pour l'entraînement et l'évaluation du modèle
         stage('Entraînement du Modèle') {
             steps {
@@ -44,11 +22,11 @@ pipeline {
                 }
             }
         }
-        stage('Évaluation du Modèle') {
+        stage('Évaluation et Entrainement du Modèle') {
             steps {
                 script {
                     // Exécutez votre script d'évaluation, assurez-vous qu'il imprime des métriques de performance claires
-                    sh 'python evaluate_model.py'
+                    sh 'python General.py'
                 }
             }
         }
