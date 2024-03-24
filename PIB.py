@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Charger les données
-data_path = 'PIBNew.xlsx'
+data_path = 'PIBnew.xlsx'
 df = pd.read_excel(data_path)
 
 # Afficher les premières lignes pour comprendre la structure des données
@@ -10,7 +10,7 @@ print(df.head())
 import pandas as pd
 
 # Charger les données
-data_path = 'PIBNew.xlsx'
+data_path = 'PIBnew.xlsx'
 df = pd.read_excel(data_path)
 
 # Afficher les premières lignes des données pour comprendre la structure
@@ -403,7 +403,7 @@ df.to_excel("fusion_modifie.xlsx", index=False)
 import pandas as pd
 
 # Charger les données
-data_path = 'PIBNew.xlsx'
+data_path = 'PIBnew.xlsx'
 df = pd.read_excel(data_path)
 
 # Afficher les premières lignes pour comprendre la structure des données
@@ -412,7 +412,7 @@ print(df.head())
 import pandas as pd
 
 # Charger les données
-data_path = 'PIBNew.xlsx'
+data_path = 'PIBnew.xlsx'
 df = pd.read_excel(data_path)
 
 # Afficher les premières lignes des données pour comprendre la structure
