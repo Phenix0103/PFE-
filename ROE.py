@@ -104,7 +104,7 @@ for column in roe_df.columns:
 # Display the ROE predictions for each bank from 2023 to 2028
 roe_predictions_df
 # Transposer le DataFrame pour avoir les années en lignes et les banques en colonnes
-output_file_path = 'roepred.xlsx'
+output_file_path ='roepred.xlsx'
 roe_predictions_df.to_excel(output_file_path)
 
 # Afficher un aperçu des données de ROA
@@ -117,7 +117,7 @@ merged_df = pd.concat([roe_df, roe_predictions_df])
 print(merged_df.head())  # Afficher seulement les premières lignes du DataFrame fusionné pour un aperçu
 
 # Chemin vers le fichier Excel de sortie pour le DataFrame fusionné
-output_merged_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/merged_roe.xlsx'
+output_merged_file_path = 'merged_roe.xlsx'
 
 # Exporter le DataFrame fusionné au format Excel
 merged_df.to_excel(output_merged_file_path)
@@ -173,7 +173,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'roe.xlsx'
+output_file_path ='roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
