@@ -10,7 +10,13 @@ pipeline {
                 url: 'https://github.com/Phenix0103/PFE-.git'
             }
         }
-        
+       
+        stage('Install dependencies') {
+            steps {
+                // Utilisez pip pour installer les dépendances à partir de requirements.txt
+                sh 'pip install -r requirements.txt'
+            }
+        }
         // Supposons que l'installation de dépendances Python et l'entraînement du modèle sont gérés par General.py
         stage('Évaluation et Entrainement du Modèle') {
             steps {
