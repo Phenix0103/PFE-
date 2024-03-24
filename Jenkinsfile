@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     // Exécutez votre script Python qui devrait gérer l'installation de dépendances
-                    sh 'python3 General.py' // Utilisez python3 qui est le chemin que vous avez configuré
+            sh 'python3 General.py'
                 }
             }
         }
