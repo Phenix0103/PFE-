@@ -27,17 +27,6 @@ sh 'python3 ROE.py'
             }
         }
 
-        stage('Docker') {
-            steps {
-                script {
-                    sh 'docker build -t kaddemimage:v${BUILD_NUMBER} -f Dockerfile ./'
-                    sh 'docker tag kaddemimage:v${BUILD_NUMBER} ceceyphoenix/projetdevops:v${BUILD_NUMBER}'
-                    sh 'docker login --username ceceyphoenix --password Princesseflora1'
-                    sh 'docker push ceceyphoenix/projetdevops:v${BUILD_NUMBER}'
-                    sh "IMAGE_VERSION=v${BUILD_NUMBER} docker compose up -d"
-                }
-            }
-        }
        
     }
     post {
