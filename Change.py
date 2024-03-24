@@ -5,7 +5,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
 # Chemin du fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/changee.xlsx'
+excel_path = 'changee.xlsx'
 
 # Nom de la feuille de calcul à lire
 sheet_name = 'Feuil1'
@@ -28,7 +28,7 @@ for col in columns_to_keep:
 # Affichage des premières lignes pour vérification
 print(change_df_filtered.head())
 
-Dollar
+
 # Sélection de la variable à prédire
 target = 'Dollar des USA'
 
@@ -60,7 +60,7 @@ r2 = r2_score(y_test, y_pred)
 print(f"MSE: {mse}")
 print(f"R^2: {r2}")
 
-Euro
+
 # Sélection de la variable à prédire
 target = 'EURO'
 
@@ -132,7 +132,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectKBest, f_regression
 
 # Chargement des données
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/changee.xlsx'
+excel_path = 'changee.xlsx'
 sheet_name = 'Feuil1'
 df = pd.read_excel(excel_path, sheet_name=sheet_name)
 
@@ -178,7 +178,7 @@ print(f"R^2: {r2}")
 import pandas as pd
 
 # Chemin du fichier Excel
-excel_path = r"C:\Users\ASUS TUF I5\Desktop\PFE\ETUDE DU SECTEUR\changee.xlsx"
+excel_path = r"changee.xlsx"
 
 # Nom de la feuille de calcul à lire
 sheet_name = 'Feuil1'
@@ -436,7 +436,7 @@ plt.tight_layout()
 # Afficher le DataFrame des prévisions
 forecasts_df
 
-Arima
+
 from sklearn.metrics import mean_squared_error
 from math import sqrt
 import numpy as np
@@ -573,7 +573,7 @@ print("MSE Scores:", mse_scores)
 import pandas as pd
 
 # Chemin du fichier Excel
-excel_path = r"C:\Users\ASUS TUF I5\Desktop\PFE\ETUDE DU SECTEUR\changee.xlsx"
+excel_path = r"changee.xlsx"
 
 # Nom de la feuille de calcul à lire
 sheet_name = 'Feuil1'
@@ -711,7 +711,7 @@ print(predictions)
 predictions.to_excel("predictions_devises.xlsx", index=False)
 
 # Save the predictions to an Excel file
-predictions_output_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Change/data/future_predictions.xlsx'
+predictions_output_path = 'future_predictions.xlsx'
 predictions.to_excel(predictions_output_path, index=False)
 
 # Tracé des prédictions futures pour chaque devise
@@ -798,7 +798,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
 # Chemin du fichier Excel
-excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/changee.xlsx'
+excel_path = 'changee.xlsx'
 
 # Nom de la feuille de calcul à lire
 sheet_name = 'Feuil1'
