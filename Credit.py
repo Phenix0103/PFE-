@@ -5,7 +5,7 @@ import seaborn as sns
 import plotly.express as px
 
 # Charger les données
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 all_data = pd.read_excel(file_path, sheet_name=None)
 
 # Initialiser un DataFrame pour le taux de croissance
@@ -168,11 +168,11 @@ plt.ylabel('Nombre de Banques')
 plt.legend(title='Classification')
 plt.show()
 
-Année
+
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire pour comprendre sa structure
@@ -294,7 +294,7 @@ print(predictions_df)
 
 # Enregistrement des prédictions dans un fichier Excel
 # Note: Changez le chemin en fonction de votre système d'exploitation et de votre environnement
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Croissance du credit/predictions_croissance_credit.xlsx'
+output_file_path = 'predictions_croissance_credit.xlsx'
 
 predictions_df.to_excel(output_file_path, index=False)
 
@@ -303,7 +303,7 @@ print(f"Le fichier a été enregistré avec succès à l'emplacement suivant: {o
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 
 # Lire toutes les feuilles du fichier Excel dans un dictionnaire
 all_data = pd.read_excel(file_path, sheet_name=None)
@@ -457,7 +457,7 @@ print(f"Le fichier a été enregistré avec succès à l'emplacement suivant: {o
 import pandas as pd
 
 # Charger le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Croissance du credit/Credit/Credit.xlsx'
+file_path = 'Credit/Credit.xlsx'
 credit_growth_df = pd.read_excel(file_path)
 
 # Afficher les premières lignes pour vérifier la structure
@@ -490,7 +490,7 @@ predictions_df = pd.DataFrame(predictions, index=np.arange(2023, 2036))
 predictions_df
 
 # Chemin vers le fichier de sortie
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Croissance du credit/Credit/CreditBanque.xlsx'
+file_path = 'Credit/CreditBanque.xlsx'
 
 # Enregistrer le DataFrame dans un fichier Excel
 predictions_df.to_excel(file_path, index=True)
