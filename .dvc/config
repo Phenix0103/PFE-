@@ -1,0 +1,5 @@
+[core]
+    remote = monstockage
+    autostage = true
+['remote "monstockage"']
+    url = C:\Users\ASUS TUF I5\Desktop\PFE\ETUDE DU SECTEUR\Jupyter\python\Stockage
