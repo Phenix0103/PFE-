@@ -23,6 +23,8 @@ pipeline {
                 script {
                     // Exécutez votre script Python qui devrait gérer l'installation de dépendances
 sh 'python3 ROE.py'
+sh 'python3 ROA.py'
+
                 }
             }
         }
