@@ -14,7 +14,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 // Utilisez pip pour installer les dépendances à partir de requirements.txt
-                sh 'pip install -r requirements.txt'
+                sh 'pip install -r Requirements.txt'
             }
         }
         // Supposons que l'installation de dépendances Python et l'entraînement du modèle sont gérés par General.py
