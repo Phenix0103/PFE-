@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'M2_HOME'
-        jenkins.plugins.shiningpanda.tools.PythonInstallation 'Python'
+    jenkins.plugins.shiningpanda.tools.PythonInstallation 'Python'
     }
     stages {
         stage('GIT') {
