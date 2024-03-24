@@ -24,6 +24,18 @@ pipeline {
                     // Exécutez votre script Python qui devrait gérer l'installation de dépendances
 sh 'python3 ROE.py'
 sh 'python3 ROA.py'
+sh 'python3 Ratio.py'
+sh 'python3 Credit.py'
+sh 'python3 Pret.py'
+sh 'python3 PIB.py'
+                    sh 'python3 levier.py'
+                    sh 'python3 Gestion.py'
+                    sh 'python3 Distribution.py'
+sh 'python3 change.py'
+
+
+
+                    
 
                 }
             }
@@ -31,7 +43,7 @@ sh 'python3 ROA.py'
 
        
     }
-    post {
+  /*  post {
         success {
             mail to: 'chouchanecyrine@gmail.com',
                  subject: "SUCCESS: Pipeline ${env.JOB_NAME} #${env.BUILD_NUMBER}",
@@ -52,5 +64,5 @@ sh 'python3 ROA.py'
                  subject: "ABORTED: Pipeline ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                  body: "The pipeline ${env.JOB_NAME} #${env.BUILD_NUMBER} was aborted."
         }
-    }
+    }*/
 }
