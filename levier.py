@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 # Function to extract financial leverage data from the balance sheet
 # This function will try to handle cases where the lookup fails by returning None
@@ -38,7 +38,7 @@ leverage_results_updated.set_index('Year', inplace=True)
 
 
 # Définir le chemin complet du fichier Excel de sortie pour les résultats de l'effet de levier financier
-output_leverage_excel_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Levier/leverage_results.xlsx'
+output_leverage_excel_path = 'leverage_results.xlsx'
 
 # Exporter le DataFrame des résultats de l'effet de levier financier dans un fichier Excel
 leverage_results_updated.to_excel(output_leverage_excel_path)
@@ -66,7 +66,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
 # Charger les données
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Levier/leverage_results.xlsx'
+file_path = 'leverage_results.xlsx'
 leverage_data = pd.read_excel(file_path, index_col='Year')
 
 # Préparation des données
@@ -132,7 +132,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-XGBOOST
+
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
@@ -152,7 +152,7 @@ r2_xgb = r2_score(y_test, y_pred_xgb)
 print(f"RMSE (XGBoost) sur l'ensemble de test: {rmse_xgb}")
 print(f"R2 (XGBoost) sur l'ensemble de test: {r2_xgb}")
 
-Arima
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -241,7 +241,7 @@ import os
 from pathlib import Path
 
 # Define the path to the Excel file
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Helper function to extract financial data
@@ -280,7 +280,7 @@ financial_analysis_results.sort_values('Year', inplace=True)
 financial_analysis_results.set_index('Year', inplace=True)
 
 # Export the enhanced financial analysis to a new Excel file
-output_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/enhanced_financial_analysis.xlsx' 
+output_path = 'enhanced_financial_analysis.xlsx' 
 financial_analysis_results.to_excel(output_path)
 
 # Plotting multiple financial metrics over the years
@@ -437,7 +437,7 @@ df = pd.DataFrame({
 
 print(df)
 
-Banque
+
 def extract_leverage_data_by_bank(sheet_name, file_path):
     # Load the sheet into a DataFrame
     df = pd.read_excel(file_path, sheet_name=sheet_name)
@@ -462,7 +462,7 @@ import matplotlib.pyplot as plt
 # extract_leverage_data_by_bank(sheet_name, file_path)
 
 # Load the Excel file
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 # Create a dictionary to store data for each bank
