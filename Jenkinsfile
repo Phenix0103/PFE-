@@ -40,7 +40,17 @@ sh 'python3 Change.py'
                 }
             }
         }
+stage('MVN SONARQUBE') {
+            steps {
+                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=cyrine -Dmaven.test.skip=true';
+            }
+        }
 
+stage('NEXUS'){
+            steps {
+                 sh 'mvn deploy';
+            }
+        }
        
     }
   /*  post {
