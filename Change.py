@@ -92,7 +92,6 @@ r2 = r2_score(y_test, y_pred)
 print(f"MSE: {mse}")
 print(f"R^2: {r2}")
 
-Yen Japonais
 # Sélection de la variable à prédire
 target = 'Yen Japonais'
 
@@ -498,7 +497,6 @@ r2_scores['Yen Japonais'] = evaluate_arima_r2(train_yen, test_yen)
 
 print(r2_scores)
 
-Regression Lineaire
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -672,7 +670,6 @@ for result in results:
     print(df_results.head())  # Affichage des premières lignes pour l'exemple
     print(f"RMSE: {result['RMSE']}, R2: {result['R2']}, MAE: {result['MAE']}")
 
-regression 2
 
 # Assumons que 'change_df_filtered_with_date' et 'columns_to_keep' sont déjà préparés
 # Assurons-nous également que la colonne des dates est au format datetime

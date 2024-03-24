@@ -1,4 +1,3 @@
-Par Année
 
 import pandas as pd
 
@@ -159,7 +158,6 @@ labels = kmeans.labels_
 silhouette_avg = silhouette_score(yearly_summary_df_adapted[['Ratio_Liquidite (%)']], labels)
 print(f'Score de silhouette pour 3 clusters : {silhouette_avg}')
 
-Par banque
 # Adapter le script pour calculer les ratios par banque à partir de la feuille "BILAN 2022"
 # Lire les données de la feuille "BILAN 2022" pour examiner la structure
 bilan_2022_df = xl.parse('BILAN 2022')
@@ -472,7 +470,6 @@ fig.update_layout(legend_title_text='Cluster')
 fig.show()
 
 
-Analyse de cluster : Le score de silhouette varie de -1 à 1. Une valeur proche de 1 indique que les points sont bien regroupés et éloignés des autres clusters. Une valeur proche de 0 indique que les clusters se chevauchent.
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.cluster import KMeans

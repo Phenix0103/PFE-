@@ -58,7 +58,6 @@ plt.show()
 print("Tableau des résultats de l'effet de levier financier :")
 print(leverage_results_updated)
 
-Régression Linéaire
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -103,7 +102,6 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-Rgression Forest
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
@@ -237,7 +235,6 @@ plt.ylabel('Effet de levier financier')
 plt.legend()
 plt.show()
 
-aUTRE METHODE
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
@@ -596,7 +593,6 @@ scores = cross_val_score(model, X, y, cv=5, scoring='r2')
 print(f"Scores de validation croisée (R²) : {scores}")
 print(f"Moyenne des scores de validation croisée (R²) : {np.mean(scores):.4f}")
 
-methode du coude
 from sklearn.cluster import KMeans
 
 # Convertir les données de levier financier en un tableau 2D pour K-Means
