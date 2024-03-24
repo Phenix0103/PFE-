@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Chemin vers le fichier Excel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialiser un DataFrame pour stocker les ROE de toutes les banques pour chaque année
@@ -37,7 +37,7 @@ import pandas as pd
 import numpy as np
 
 # Load the provided Excel file
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xls = pd.ExcelFile(file_path)
 
 # Initialize an empty DataFrame to collect ROE data
@@ -104,7 +104,7 @@ for column in roe_df.columns:
 # Display the ROE predictions for each bank from 2023 to 2028
 roe_predictions_df
 # Transposer le DataFrame pour avoir les années en lignes et les banques en colonnes
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roepred.xlsx'
+output_file_path = 'roepred.xlsx'
 roe_predictions_df.to_excel(output_file_path)
 
 # Afficher un aperçu des données de ROA
@@ -173,7 +173,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roe.xlsx'
+output_file_path = 'roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -223,7 +223,7 @@ import numpy as np
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roe.xlsx'
+output_file_path = 'roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -263,7 +263,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roe.xlsx'
+output_file_path = 'roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
@@ -370,7 +370,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Chemin vers le fichier Excel à évaluer
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/roe.xlsx'
+output_file_path = 'roe.xlsx'
 
 # Charger les données à partir du fichier Excel
 roe_df_eval = pd.read_excel(output_file_path, index_col=0)
