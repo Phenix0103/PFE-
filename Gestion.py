@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Chemin d'accès au fichier Excel ajusté pour l'environnement actuel
-file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/EtudeSB - Copie.xlsx'
+file_path = 'EtudeSB - Copie.xlsx'
 xl = pd.ExcelFile(file_path)
 
 def calculate_ratios_for_year_adapted(bilan_df):
@@ -61,7 +61,7 @@ for year in range(2010, 2023):
     yearly_data_adapted['Passifs_Court_Terme'].append(passifs_ct)
     yearly_data_adapted['Ratio_Liquidite (%)'].append(ratio_liquidite)
 # Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Gestion des passifs actifs/Yearly_Ratios_Summary.xlsx'
+output_file_path = 'Yearly_Ratios_Summary.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 
@@ -212,7 +212,7 @@ for bank in bilan_2022_df.columns[1:-1]:  # Exclure la première et la dernière
 # Enregistrer le DataFrame sous forme de fichier Excel
 # Convertir le dictionnaire en DataFrame pour une visualisation et une analyse faciles
 # Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Gestion des passifs actifs/bANK_Ratios_Summary.xlsx'
+output_file_path = 'bANK_Ratios_Summary.xlsx'
 
 # Convertir le dictionnaire en DataFrame pour une visualisation et une analyse faciles
 bank_summary_df_adapted = pd.DataFrame(bank_data)
@@ -370,7 +370,7 @@ for year in range(2010, 2023):
         all_bank_data['Passifs_Court_Terme'].append(passifs_court_terme)
         all_bank_data['Ratio_Liquidite (%)'].append(ratio_liquidite)
  #Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Gestion des passifs actifs/YearlyBank_Ratios_Summary.xlsx'
+output_file_path = 'YearlyBank_Ratios_Summary.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 yearly_summary_df_adapted.to_excel(output_file_path, sheet_name='Ratios Summary', index=False)
@@ -415,7 +415,7 @@ scaled_features = scaler.fit_transform(imputed_features)
 kmeans = KMeans(n_clusters=3, random_state=42)  # Ajustez le nombre de clusters si nécessaire
 banka_summary_df['Cluster'] = kmeans.fit_predict(scaled_features)
 #Spécifier le chemin d'accès et le nom du fichier où vous souhaitez enregistrer le DataFrame
-output_file_path = 'C:/Users/ASUS TUF I5/Desktop/PFE/ETUDE DU SECTEUR/KPI/Gestion des passifs actifs/cluster.xlsx'
+output_file_path = 'cluster.xlsx'
 
 # Enregistrer le DataFrame sous forme de fichier Excel
 yearly_summary_df_adapted.to_excel(output_file_path, sheet_name='Ratios Summary', index=False)
