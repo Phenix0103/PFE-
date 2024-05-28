@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: 
+      context: https://github.com/Phenix0103/PFE-.git#master  # Spécifiez le chemin GitHub vers votre projet et branche
+      dockerfile: Dockerfile  # Nom du Dockerfile à utiliser pour la construction de l'image
+    container_name: pfecyrine
+    restart: always  # Redémarrez toujours le conteneur en cas de panne
+    ports:
+      - "8080:8080"  # Mappez le port du conteneur sur le port de l'hôte, modifiez le port selon vos besoins
