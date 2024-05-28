@@ -46,10 +46,10 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image with Jenkins BUILD_NUMBER as the version
-                    sh 'docker build -t pfe:v${BUILD_NUMBER} -f Dockerfile ./'
+                    sh 'docker build -t kaddemimage:v${BUILD_NUMBER} -f Dockerfile ./'
                     
                     // Tagging the Docker image for Docker Hub
-                    sh 'docker tag pfe:v${BUILD_NUMBER} ceceyphoenix/pfecyrine:v${BUILD_NUMBER}'
+                    sh 'docker tag kaddemimage:v${BUILD_NUMBER} ceceyphoenix/pfecyrine:v${BUILD_NUMBER}'
 
                     // Login to Docker Hub (Ensure Docker Hub credentials are configured in Jenkins)
                     // The 'dockerhubcredentials' should be the ID of your Docker Hub credentials stored in Jenkins
