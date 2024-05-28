@@ -22,38 +22,62 @@ pipeline {
             steps {
                 script {
                     // Exécutez votre script Python qui devrait gérer l'installation de dépendances
-sh 'python3 ROE.py'
-sh 'python3 ROA.py'
-sh 'python3 Ratio.py'
-sh 'python3 Credit.py'
-sh 'python3 Pret.py'
-sh 'python3 PIB.py'
+                    sh 'python3 ROE.py'
+                    sh 'python3 ROA.py'
+                    sh 'python3 Ratio.py'
+                    sh 'python3 Credit.py'
+                    sh 'python3 Pret.py'
+                    sh 'python3 PIB.py'
                     sh 'python3 levier.py'
                     sh 'python3 Gestion.py'
                     sh 'python3 Distribution.py'
-//sh 'python3 Change.py'
-
-
-
-                    
-
+                    //sh 'python3 Change.py' 
                 }
             }
         }
-/*stage('MVN SONARQUBE') {
+
+        stage('MVN SONARQUBE') {
             steps {
                 sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=cyrine -Dmaven.test.skip=true';
             }
         }
 
-stage('NEXUS'){
+        stage('NEXUS') {
             steps {
-                 sh 'mvn deploy';
+                sh 'mvn deploy';
             }
         }
-       */
-    }
-  /*  post {
+       
+        stage('Docker') {
+            steps {
+                script {
+                    // Build the Docker image with Jenkins BUILD_NUMBER as the version
+                    sh 'docker build -t kaddemimage:v${BUILD_NUMBER} -f Dockerfile ./'
+                    
+                    // Tagging the Docker image for Docker Hub
+                    sh 'docker tag kaddemimage:v${BUILD_NUMBER} ceceyphoenix/projetdevops:v${BUILD_NUMBER}'
+
+                    // Login to Docker Hub (Ensure Docker Hub credentials are configured in Jenkins)
+                    // The 'dockerhubcredentials' should be the ID of your Docker Hub credentials stored in Jenkins
+                    sh 'docker login --username ceceyphoenix --password Princesseflora1'
+                    
+                    // Push the Docker image to Docker Hub
+                    sh 'docker push ceceyphoenix/projetdevops:v${BUILD_NUMBER}'
+                    
+                    // Run Docker Compose
+                    sh "IMAGE_VERSION=v${BUILD_NUMBER} docker compose up -d"
+                }
+            }
+        }
+        
+        stage('Grafana') {
+            steps {
+                sh 'docker compose up -d'
+            }
+        }
+    } // Fin des stages
+    
+    /*post {
         success {
             mail to: 'chouchanecyrine@gmail.com',
                  subject: "SUCCESS: Pipeline ${env.JOB_NAME} #${env.BUILD_NUMBER}",
@@ -75,4 +99,4 @@ stage('NEXUS'){
                  body: "The pipeline ${env.JOB_NAME} #${env.BUILD_NUMBER} was aborted."
         }
     }*/
-}
+} // Fin du pipeline
