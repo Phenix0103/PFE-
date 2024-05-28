@@ -35,12 +35,14 @@ pipeline {
                 }
             }
         }
-
-       stage('Code Analysis') {
-            steps {
-                sh 'sonar-scanner -Dsonar.login=admin -Dsonar.password=cyrine -sonar.projectKey=PFECyrine'
-            }
-        }
+ 
+        
+        stage('SonarQube Analysis') {
+    def scannerHome = tool 'SonarScanner';
+    withSonarQubeEnv() {
+      sh "${scannerHome}/bin/sonar-scanner"
+    }
+  }
         
 
         stage('NEXUS') {
