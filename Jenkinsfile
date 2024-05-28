@@ -36,11 +36,12 @@ pipeline {
             }
         }
 
-        stage('Code Analysis') {
+       stage('Code Analysis') {
             steps {
-                sh 'sonar-scanner -Dsonar.login=admin -Dsonar.password=cyrine'
+                sh 'sonar-scanner -Dsonar.login=admin -Dsonar.password=cyrine -sonar.projectKey=PFECyrine'
             }
         }
+        
 
         stage('NEXUS') {
             steps {
