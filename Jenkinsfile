@@ -36,9 +36,9 @@ pipeline {
             }
         }
 
-        stage('MVN SONARQUBE') {
+        stage('Code Analysis') {
             steps {
-                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=cyrine -Dmaven.test.skip=true';
+                sh 'sonar-scanner -Dsonar.login=admin -Dsonar.password=cyrine'
             }
         }
 
