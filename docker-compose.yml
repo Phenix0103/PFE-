@@ -8,4 +8,4 @@ services:
     container_name: pfecyrine
     restart: always  # Redémarrez toujours le conteneur en cas de panne
     ports:
-      - "8080:8080"  # Mappez le port du conteneur sur le port de l'hôte, modifiez le port selon vos besoins
+      - "8082:8082"  # Mappez le port du conteneur sur le port de l'hôte, modifiez le port selon vos besoins
